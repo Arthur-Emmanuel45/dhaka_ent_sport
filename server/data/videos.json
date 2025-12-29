@@ -1,0 +1,98 @@
+[
+    {
+        "id": "wg1",
+        "title": "New Music Festival Announces Lineup",
+        "category": "EPL",
+        "video": "/videos/try_video.mp4",
+        "date": "2025-11-20",
+        "smug": "fweek goals"
+    },
+    {
+        "id": "wg2",
+        "title": "Dhaka City Marathon: Local Stars Shine",
+        "category": "Laliga",
+        "video": "/videos/try_video.mp4",
+        "date": "2025-11-05",
+        "smug": "fweek goals"
+    },
+    {
+        "id": "wg3",
+        "title": "Startup Launches AI Tool for Musicians",
+        "category": "BL",
+        "video": "/videos/try_video.mp4",
+        "date": "2025-11-12",
+        "smug": "fweek goals"
+    },
+    {
+        "id": "wg4",
+        "title": "Startup Launches AI Tool for Musicians",
+        "category": "Italian Serial A",
+        "video": "/videos/try.png",
+        "date": "2025-11-12",
+        "smug": "sweek goals"
+    },
+    {
+        "id": "wg5",
+        "title": "Dhaka City Marathon: Local Stars Shine",
+        "category": "French Legue I",
+        "video": "/videos/try.png",
+        "date": "2025-11-05",
+        "smug": "sweek goals"
+    },
+    {
+        "id": "wg6",
+        "title": "Startup Launches AI Tool for Musicians",
+        "category": "ECL",
+        "video": "/videos/try.png",
+        "date": "2025-11-12",
+        "smug": "sweek goals"
+    },
+    {
+        "id": "mg1",
+        "title": "New Music Festival Announces Lineup",
+        "category": "EPL",
+        "video": "/videos/try.png",
+        "date": "2025-11-20",
+        "smug": "fmonth goals"
+    },
+    {
+        "id": "mg2",
+        "title": "Dhaka City Marathon: Local Stars Shine",
+        "category": "Laliga",
+        "video": "/videos/try.png",
+        "date": "2025-11-05",
+        "smug": "fmonth goals"
+    },
+    {
+        "id": "mg3",
+        "title": "Startup Launches AI Tool for Musicians",
+        "category": "BL",
+        "video": "/videos/try.png",
+        "date": "2025-11-12",
+        "smug": "fmonth goals"
+    },
+    {
+        "id": "mg4",
+        "title": "Startup Launches AI Tool for Musicians",
+        "category": "Italian Serial A",
+        "video": "/videos/try.png",
+        "date": "2025-11-12",
+        "smug": "smonth goals"
+    },
+    {
+        "id": "mg5",
+        "title": "Dhaka City Marathon: Local Stars Shine",
+        "category": "French Legue I",
+        "video": "/videos/try.png",
+        "date": "2025-11-05",
+        "smug": "smonth goals"
+    },
+    {
+        "id": "mg6",
+        "title": "Startup Launches AI Tool for Musicians",
+        "category": "ECL",
+        "video": "/videos/try.png",
+        "date": "2025-11-12",
+        "smug": "smonth goals"
+    }
+]

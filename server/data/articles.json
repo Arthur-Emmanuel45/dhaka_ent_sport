@@ -1,0 +1,56 @@
+[
+  {
+    "id": "1",
+    "title": "Dhaka City Marathon: Local Stars Shine",
+    "category": "weekly news",
+    "excerpt": "Highlights from yesterday's marathon in Dhaka where young athletes made headlines.",
+    "content": "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+    "image": "/images/try.png",
+    "date": "2025-11-20"
+  },
+  {
+    "id": "2",
+    "title": "New Music Festival Announces Lineup",
+    "category": "weekly news",
+    "excerpt": "The Dhaka Summer Beats festival revealed their headliners for next year.",
+    "content": "Full article content for the music festival announcement. Migrate posts from old site as needed.",
+    "image": "/images/try2.jpg",
+    "date": "2025-10-03"
+  },
+  {
+    "id": "3",
+    "title": "Startup Launches AI Tool for Musicians",
+    "category": "weekly news",
+    "excerpt": "A local startup built an AI to help composers and producers iterate faster.",
+    "content": "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+    "image": "/images/try3.jpg",
+    "date": "2025-09-15"
+  },
+  {
+    "id": "4",
+    "title": "Startup Launches AI Tool for sports",
+    "category": "sport event",
+    "excerpt": "A local startup built an AI to help composers and producers iterate faster.",
+    "content": "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+    "image": "/images/try2.jpg",
+    "date": "2025-09-15"
+  },
+  {
+    "id": "5",
+    "title": "Top 10 Viral sports This Week",
+    "category": "sport event",
+    "excerpt": "A roundup of the most-viewed local clips across social platforms.",
+    "content": "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+    "image": "/images/try.png",
+    "date": "2025-11-25"
+  },
+  {
+    "id": "6",
+    "title": "Dhaka City Marathon: Local Stars Shine",
+    "category": "main sport event",
+    "excerpt": "Highlights from yesterday's marathon in Dhaka where young athletes made headlines.",
+    "content": "Full article content for the Dhaka City Marathon. Replace with migrated content from original site.",
+    "image": "/images/try3.jpg",
+    "date": "2025-11-20"
+  }
+]

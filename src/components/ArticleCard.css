@@ -1,0 +1,56 @@
+.card.default, .card.w-goals{
+    background-color:#fff;
+    border:1px solid #ececec;
+    box-shadow: 1px 2px 5px #9a9a9a;
+    width: 30%;
+    overflow:hidden;
+} 
+
+.card-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration:none;
+    color:inherit;
+}
+.page-video {
+    display: none;
+}
+
+.card.default .post-image {
+    width:90%;
+    height:170px;
+    margin: 5% 5% 0 ;
+    background-size:cover;
+    background-position:center
+}
+
+.card.default .card-body, .card.w-goals .card-body{
+    padding:12px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between
+}
+
+.card.default .card-title, .card.w-goals .card-title{
+    font-size:16px;
+    margin:0 0 8px
+}
+
+.card.default .card-excerpt, .card.w-goals .card-excerpt{
+    margin:0;
+    color:#5c0404;
+    font-size:14px;
+    font-weight: 700;
+}
+
+.card-meta{
+    margin-top:10px;
+    font-size:16px;
+    color:#c5c5c5;
+    font-weight: 800;
+}
+
+.card-link:hover {
+    background-color: #00000019;
+}

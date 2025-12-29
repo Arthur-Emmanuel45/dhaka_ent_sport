@@ -1,0 +1,32 @@
+.pageLayout-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.pageLayout-items-container {
+    max-width: 80%;
+    padding: 10px;
+}
+
+.card.pageLayout-style {
+    max-width: 100%;
+    margin: 20px auto;
+    border-bottom: 1px solid #000;
+    padding: 20px;
+}
+
+.card.pageLayout-style .post-image {
+    width: 100%;
+}
+
+.card.pageLayout-style .card-excerpt {
+    font-family: 'ROTOBO';
+    letter-spacing: 1px;
+}
+
+@media (min-width: 767px) and (max-width: 1190px) {
+    .pageLayout-items-container {
+        max-width: 70%;
+    }
+
+}

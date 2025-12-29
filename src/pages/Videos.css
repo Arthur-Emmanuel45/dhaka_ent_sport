@@ -1,0 +1,37 @@
+.article-main-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.main-left {
+    width: 80%;
+}
+
+.main-right {
+    width: 20%;
+    border-left: 1px solid #5c0404;
+}
+
+.card.w-goals .page-video {
+    display: block;
+    width:90%;
+    height:170px;
+    margin: 5% auto 0;
+}
+
+.card.w-goals .post-image {
+    display: none;
+}
+
+@media (min-width: 767px) and (max-width: 1190px) {
+    .main-right {
+        width: 30%;
+    }
+    .main-left {
+        width: 70%;
+    }
+    .flex {
+        gap: 5px;
+    }
+}

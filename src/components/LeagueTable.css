@@ -1,0 +1,106 @@
+/* Layout */
+.league-layout {
+  display: flex;
+  gap: 20px;
+}
+
+/* Left menu */
+.league-list {
+  width: 240px;
+}
+
+.league-btn {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 6px;
+  border: none;
+  background: #f1f1f1;
+  cursor: pointer;
+  text-align: left;
+}
+
+.league-btn.active {
+  background: #ff5a5f;
+  color: white;
+  font-weight: bold;
+}
+
+/* Table */
+.league-table-header {
+    display: flex;
+    gap: 5px;
+}
+
+.league-table-header img {
+    width: 30px;
+    height: 30px;
+}
+.league-table {
+  flex: 1;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Highlights */
+.top-four {
+  background: rgba(0, 180, 0, 0.12);
+  font-weight: 600;
+}
+
+.relegation {
+  background: rgba(255, 0, 0, 0.12);
+}
+
+.league-logo {
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.league-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.league-header img {
+  width: 36px;
+}
+
+.gd-positive {
+  color: green;
+  font-weight: 600;
+}
+
+.gd-negative {
+  color: red;
+}
+
+
+@media (max-width: 768px) {
+  .league-layout {
+    flex-direction: column;
+  }
+
+  .league-list {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+  }
+
+  .league-btn {
+    white-space: nowrap;
+  }
+}

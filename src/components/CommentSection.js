@@ -8,13 +8,16 @@ const CommentSection = ({postId}) => {
     const [comments, setComments] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    const [replyTo, setReplyTo] = useState(null);
+    const [replyMessage, setReplyMessage] = useState("");
+
     const buildTree = (comments, parentId = null) =>
-    comments
-    .filter(c => c.parentId === parentId)
-    .map(c => ({
-        ...c,
-        replies: buildTree(comments, c.id)
-    }));
+        comments
+        .filter(c => c.parentId === parentId)
+        .map(c => ({
+            ...c,
+            replies: buildTree(comments, c.id)
+        }));
 
     useEffect(() => {
         fetch(`http://localhost:5000/api/comments/${postId}`)
@@ -40,6 +43,92 @@ const CommentSection = ({postId}) => {
         setName("");
         setMessage("");
     };
+
+
+    const submitReply = async (parentId) => {
+        const res = await fetch("http://localhost:5000/api/comments", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                postId,
+                parentId,
+                message: replyMessage
+            })
+        });
+
+        const newReply = await res.json();
+        setComments(prev => [...prev, newReply]);
+        setReplyMessage("");
+        setReplyTo(null);
+    };
+
+    const deleteComment = async (id) => {
+        await fetch(`http://localhost:5000/api/comments/${id}`, {
+            method: "DELETE"
+        });
+        setComments(prev =>
+            prev.filter(c => c.id !== id && c.parentId !== id)
+        );
+    };
+
+    const react = async (id, type) => {
+        const res = await fetch(
+            `http://localhost:5000/api/comments/${id}/reaction`,
+            {
+                method: "PATCH",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ type })
+            }
+        );
+        const updated = await res.json();
+
+        setComments(prev =>
+            prev.map(c => (c.id === id ? updated : c))
+        );
+    };
+
+
+    const renderComments = (list) =>
+        list.map(c => (
+            <div key={c.id} className="comment-container">
+                <p className="comment-message">{c.message}</p>
+
+                <div className="comment-actions">
+                    <span>{c.name}</span>
+
+                    <button onClick={() => react(c.id, "like")}>
+                        👍 {c.likes}
+                    </button>
+
+                    <button onClick={() => react(c.id, "dislike")}>
+                        👎 {c.dislikes}
+                    </button>
+
+                    <button onClick={() => setReplyTo(c.id)}>Reply</button>
+
+                    <button onClick={() => deleteComment(c.id)}>Delete</button>
+                </div>
+
+                {replyTo === c.id && (
+                    <div className="reply-box">
+                        <textarea
+                        value={replyMessage}
+                        onChange={e => setReplyMessage(e.target.value)}
+                        />
+                        <button onClick={() => submitReply(c.id)}>
+                        Post Reply
+                        </button>
+                    </div>
+                )}
+
+                {c.replies?.length > 0 && (
+                    <div className="replies">
+                        {renderComments(c.replies)}
+                    </div>
+                )}
+            </div>
+    ));
+
 
     return (
         <div id="comment">
@@ -78,17 +167,8 @@ const CommentSection = ({postId}) => {
                     className="comment-post"
                     style={{
                     backgroundColor: comments.length ? "#bdbdbd" : "transparent",
-                    }}
-                >
-                        {comments.map((c) => (
-                        <div className="comment-container" key={c.id}>
-                            <p className="comment-message">{c.message}</p>
-                            <span className="comment-detile">{c.name}</span>
-                            <span className="comment-detile">
-                                {new Date(c.date).toLocaleString()}
-                            </span>
-                        </div>
-                        ))}
+                    }}>
+                        {renderComments(buildTree(comments))}
                     </div>
                 )}
                

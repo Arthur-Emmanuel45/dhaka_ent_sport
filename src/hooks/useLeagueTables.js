@@ -1,6 +1,4 @@
-import React from 'react';
 import { useEffect, useState } from "react";
-
 
 const CACHE_KEY = "leagueTablesCache";
 const CACHE_TTL = 1000 * 60 * 10; 

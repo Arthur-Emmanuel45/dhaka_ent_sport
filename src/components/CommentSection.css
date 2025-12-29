@@ -54,3 +54,20 @@ textarea {
     color:#5c0404;
     border: 1px solid #5c0404
 }
+
+.comment-actions {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.replies {
+    margin-left: 30px;
+    border-left: 2px solid #eee;
+    padding-left: 15px;
+}
+
+.reply-box textarea {
+    width: 100%;
+    margin-top: 5px;
+}

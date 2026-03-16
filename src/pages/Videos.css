@@ -13,11 +13,15 @@
     border-left: 1px solid #5c0404;
 }
 
-.card.w-goals .page-video {
+.card.w-goals .card-video-container {
     display: block;
-    width:90%;
-    height:170px;
+    width: 90%;
+    height: 170px;
     margin: 5% auto 0;
+}
+.card.w-goals .page-video {
+    width: 100%;
+    height: 100%;
 }
 
 .card.w-goals .post-image {

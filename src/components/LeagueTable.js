@@ -1,11 +1,11 @@
 import React from 'react';
 import { useState } from "react";
 import './LeagueTable.css';
-import UseLeagueTables from '../hooks/useLeagueTables';
+import useLeagueTables from '../hooks/useLeagueTables';
 import { API_BASE } from './apiBase';
 
 const LeagueTable = () => {
-    const { leagues, loading, error } = UseLeagueTables();
+    const { leagues, loading, error } = useLeagueTables();
     const [selected, setSelected] = useState(null);
 
     if (loading) return <div>Loading league tables...</div>;
@@ -14,6 +14,8 @@ const LeagueTable = () => {
     const leagueKeys = Object.keys(leagues);
     const activeKey = selected || leagueKeys[0];
     const league = leagues[activeKey];
+
+    if (!leagueKeys.length) return <div>No leagues found</div>;
 
     return (
         <div className="league-layout">
@@ -56,19 +58,21 @@ const LeagueTable = () => {
                             <th>Pts</th>
                         </tr>
                     </thead>
-                    <tbody> 
-                        {league.teams.map(t => {
+                    <tbody>
+                        {league.table.map(t => {
+
                             const goalDiff = t.goalsfor - t.goalsAgainst;
-                            const loss = t.win - t.draw;
+                            const loss = t.played - (t.win + t.draw);
+
                             return (
                                 <tr
                                     key={t.pos}
                                     className={
-                                    t.pos <= 4
-                                        ? "top-four"
-                                        : t.pos >= 18
-                                        ? "relegation"
-                                        : ""
+                                        t.pos <= 4
+                                            ? "top-four"
+                                            : t.pos >= 18
+                                            ? "relegation"
+                                            : ""
                                     }
                                 >
                                     <td>{t.pos}</td>
@@ -79,14 +83,24 @@ const LeagueTable = () => {
                                     <td>{loss}</td>
                                     <td>{t.goalsfor}</td>
                                     <td>{t.goalsAgainst}</td>
-                                    <td className={goalDiff > 0 ? "gd-positive" : "gd-negative"}>
+
+                                    <td
+                                        className={
+                                            goalDiff > 0
+                                                ? "gd-positive"
+                                                : goalDiff < 0
+                                                ? "gd-negative"
+                                                : ""
+                                        }
+                                    >
                                         {goalDiff > 0 ? `+${goalDiff}` : goalDiff}
                                     </td>
+
                                     <td>{t.points}</td>
                                 </tr>
                             );
                         })}
-                    </tbody>
+                        </tbody>
                 </table>
             </div>
         </div>

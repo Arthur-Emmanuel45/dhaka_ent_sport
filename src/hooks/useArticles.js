@@ -1,5 +1,6 @@
 // import React from 'react';
 import { useState, useEffect } from 'react';
+import { API_BASE } from '../components/apiBase';
 
 const UseArticles = () => {
     const [articles, setArticles] = useState([]);
@@ -9,7 +10,7 @@ const UseArticles = () => {
     useEffect(() => {
         let mounted = true;
         setLoading(true);
-        fetch('http://localhost:5000/api/articles')
+        fetch(`${API_BASE}api/articles`)
             .then(r => {
                 if(!r.ok) throw new Error('Network response not ok');
                 return r.json();

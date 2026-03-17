@@ -18,7 +18,7 @@ const useLeagueTable = () => {
         }
 
         if (cached) {
-            const { data, timestamp } = JSON.parse(cached);
+            const { data, timestamp } = cached;
             if (Date.now() - timestamp < CACHE_TTL) {
                 setLeagues(data);
                 setLoading(false);
@@ -26,7 +26,7 @@ const useLeagueTable = () => {
             }
         }
 
-        fetch(`${API_BASE}/api/leagues`)
+        fetch(`${API_BASE}api/leagues`)
             .then(res => {
                 if (!res.ok) throw new Error("Failed to load leagues");
                 return res.json();

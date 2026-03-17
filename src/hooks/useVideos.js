@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { API_BASE } from '../components/apiBase';
 
 const UseVideos = () => {
     const [videos, setVideos] = useState([]);
@@ -8,7 +9,7 @@ const UseVideos = () => {
     useEffect(() => {
         let mounted = true;
         setVLoading(true);
-        fetch('http://localhost:5000/api/videos')
+        fetch(`${API_BASE}/api/videos`)
             .then(r => {
                 if(!r.ok) throw new Error('Network response not ok');
                 return r.json();

@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/dhaka_ent_sport/static/css/main.2f44d3ca.css",
-    "main.js": "/dhaka_ent_sport/static/js/main.656229e7.js",
+    "main.js": "/dhaka_ent_sport/static/js/main.93f8a4be.js",
     "static/js/453.6ce8537b.chunk.js": "/dhaka_ent_sport/static/js/453.6ce8537b.chunk.js",
     "index.html": "/dhaka_ent_sport/index.html",
     "main.2f44d3ca.css.map": "/dhaka_ent_sport/static/css/main.2f44d3ca.css.map",
-    "main.656229e7.js.map": "/dhaka_ent_sport/static/js/main.656229e7.js.map",
+    "main.93f8a4be.js.map": "/dhaka_ent_sport/static/js/main.93f8a4be.js.map",
     "453.6ce8537b.chunk.js.map": "/dhaka_ent_sport/static/js/453.6ce8537b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2f44d3ca.css",
-    "static/js/main.656229e7.js"
+    "static/js/main.93f8a4be.js"
   ]
 }
